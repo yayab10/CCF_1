@@ -1,45 +1,6 @@
-/* Responsive Styles */
+
 @media screen and (max-width: 768px) {
-    /* .burger-icon {
-        display: flex;
-        position: absolute;
-        right: 10px;
-        top: 110px;
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-list.show {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .nav-dropdown:hover .options-service {
-        display: block;
-    }
-
-    .service {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-
-    .open-modal {
-        font-size: 12px;
-    } */
+   
 
 
     #topnav_menu {
@@ -50,7 +11,7 @@
         flex-grow: 1;
       }
     
-      /* desactivation du crool */
+      /* desactivation du scrool */
       #root {
         position: relative;
         overflow-x: hidden;
@@ -212,7 +173,7 @@
     /* A Propos */
     .about_image {
         width: 40%;
-        height: 150px;
+        height: 15em;
         border-radius: 8px;
         border: solid green 2px;
         min-width: 150px;
@@ -249,4 +210,4 @@
     .contact_composant{
         flex-direction: column;
     }
-}
+
