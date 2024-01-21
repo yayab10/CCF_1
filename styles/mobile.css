@@ -1,0 +1,27 @@
+@media screen and (max-width: 400px) {
+
+/* Accueil */
+/* Slideshow container */
+.slideshow-container {
+    width: 90vw;
+    height: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+    #league1, #championsLeague, #worldCup{
+        width: 20vw;
+        /* min-width: 300px; */
+        margin-bottom: 1em;
+      }
+
+      .marginRight{
+        width: 100%;
+        padding: 30px;
+        /* max-width: 700px; */
+        /* min-width: 300px; */
+      }
+      .marginRight h2{
+        font-size: 3em;
+      }
+}

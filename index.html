@@ -4,78 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez nos services de bien-être et récupération sportive de qualité, incluant des massages suédois et californien, cupping thérapie, cryothérapie, soins du visage, scraping et pressothérapie. Réservez une séance pour une expérience de détente et de revitalisation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/tablette.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap" async defer></script>
     <title>Bien-être & Récupération Sportive : Massages, Soins du visage, Cupping, Cryothérapie & Plus </title>
 </head>
 <body>
     <header>
-            <img src="images/logo.png" alt="logo_pole_recup" id="logo">
+            <img src="images/logo2.JPG" alt="logo_pole_recup" id="logo">
         <h1 id="principalTitle">POLE RECUP</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#services" id="toggleLink">Service</a></li>
-                    <ul id="optionsService">
-                        <li><a href="#">Techniques de soins corporels et thérapie manuelles</a></li>
-                        <li><a href="#">Technologies et appareils thérapeutiques</a></li>
-                    </ul>
-                <li><a href="#temoignages">Témoignages</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+        <div id="root">
+            <div id="topnav" class="topnav">
+              <a id="home_link" class="topnav_link" href="#accueil">ACCUEIL</a>
+          
+              <nav role="navigation" id="topnav_menu">
+                <a class="topnav_link" id="about_display" href="#about">A PROPOS</a>
+                <a class="topnav_link" id="services_display" href="#services">SERVICES</a>
+                <a class="topnav_link" id="price_display" href="#price">TARIFS</a>
+                <a class="topnav_link" id="contact_display" href="#contact">CONTACT</a>
+              </nav>
+          
+              <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+          
+              <!-- Menu responsive-->
+              <nav role="navigation" id="topnav_responsive_menu">
+                <ul>
+                  <li><a href="#accueil">ACCUEIL</a></li>
+                  <li><a href="#about" id="about_display">A PROPOS</a></li>
+                  <li><a href="#services" id="services_display">SERVICES</a></li>
+                  <li><a href="#price" id="price_display">TARIFS</a></li>
+                  <li><a href="#contact" id="contact_display">CONTACT</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+
     </header>
 
     <section id="accueil">
         <p id="welcome">Bienvenue nous avons le plaisir de vous compter parmis nos clients et tenons a vous remercier de l'interet que vous porter a la maison <em>Pôle Recup .</em> </p>
         
-   <!-- Slideshow container -->
-<div class="slideshow-container fade">
+        <!-- Carrousel conteneur -->
+        <div class="slideshow-container fade">
 
-    <!-- Full images / Content -->
-    <div class="Containers">
-      <div class="info">Slide 1</div>
-      <img src="images/background.jpg">
-      <div class="Info">First caption</div>
-    </div>
-  
-    <div class="Containers">
-      <div class="info">Slide 2</div>
-      <img src="images/background.JPG">
-      <div class="Info">Second Caption</div>
-    </div>
-  
-    <div class="Containers">
-      <div class="info">Slide 3</div>
-      <img src="images/cryotherapie.jpg">
-      <div class="Info">Third Caption</div>
-    </div>
-  
-    <!-- Prev and Next buttons -->
-    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots -->
-  <div style="text-align:center">
-    <span class="dots" onclick="currentSlide(1)"></span>
-    <span class="dots" onclick="currentSlide(2)"></span>
-    <span class="dots" onclick="currentSlide(3)"></span>
-  </div>  
+            <!--Images et Contenus -->
+            <div class="Containers">
+            <div class="info">PRENNEZ</div>
+            <img src="../images/slide1.jpg">
+            <div class="Info">Des joueurs</div>
+            </div>
+        
+            <div class="Containers">
+            <div class="info">VITE</div>
+            <img src="../images/slide2.jpg">
+            <div class="Info">Proffessionels qui</div>
+            </div>
+        
+            <div class="Containers">
+            <div class="info">RDV!!!</div>
+            <img src="images/slide3.JPG">
+            <div class="Info">nous ont fait confiance</div>
+            </div>
+        
+            <!-- Buttons suivants et précédents -->
+            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- Les points -->
+        <div style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+        </div>  
+
     </section>
 
-    <section id="about">
+    <section id="about" class="display">
         <div id="imagesPropos">
             <div id="imagesPropos_1">
                 <img src="images/massage-sportif.jpg" alt="image_massage" class="about_image">
                 <img src="images/ampoules.jpg" alt="image_ampouleMassage" class="about_image">
-                <img src="images/massage-pistolet.jpg" alt="image_massagePistolet" class="about_image">
+                <img src="images/massage-pistolet.jpg" alt="image_massagePistolet" class="about_image alignSelf">
             </div>
             <div id="imagesPropos_2">
                 <img src="images/pressotherapie.jpg" alt="image_pressotherapie" class="about_image">
                 <img src="images/bien-etre.jpg" alt="image_bien-etre" class="about_image">
-                <img src="images/soin-visage.jpg" alt="image_soinVisage" class="about_image">
+                <img src="images/soin-visage.jpg" alt="image_soinVisage" class="about_image alignSelf">
             </div>
         </div>
         <div id="descriptAbout">
@@ -108,101 +131,174 @@
             </div>
         </div>
     </section>
-    <section id="services">
+    <section id="services" class="display">
         <div id="naturel">
             <h1>Techniques de soins corporel et thérapie naturelle</h1>
             <div id="firstLine">
-                <section class="service">
+                <section class="service" id="service1">
                     <img src="images/massage_californien.jpg" alt="massage_californien">
                     <h2>Massage californien</h2>
-                    <p>Le massage californien se caractérise par des mouvements longs, fluides et intégrateurs, qui servent de base à un large éventail de techniques de contact profond avec la peau. Il s'agit d'un modelage relaxant qui est souvent effectué avec de l'huile.</p>
+                    <p id="m_c">Le massage californien se caractérise par des mouvements longs, fluides et intégrateurs, qui servent de base à un large éventail de techniques de contact profond avec la peau. Il s'agit d'un modelage relaxant qui est souvent effectué avec de l'huile.</p>
+                    <button class="open-modal" id="massage_californien">En savoir plus</button>
                 </section>
-                <section class="service">
+                <section class="service" id="service2">
                     <img src="images/massage_suedois.jpg" alt="massage_suedois">
                     <h2>Massage Suédois</h2>
-                    <p>Le massage suédois est une technique dynamique qui consiste en un enchaînement de manœuvres exécutées principalement sur la musculature et les articulations. Les techniques du massage suédois ont pour but de faire circuler le sang vers le cœur.</p>
+                    <p id="m_s">Le massage suédois est une technique dynamique qui consiste en un enchaînement de manœuvres exécutées principalement sur la musculature et les articulations. Les techniques du massage suédois ont pour but de faire circuler le sang vers le cœur.</p>
+                    <button class="open-modal" id="massage_suedois">En savoir plus</button>
                 </section>
-                <section class="service">
+                <section class="service" id="service3">
                     <img src="images/ampoules.jpg" alt="cupping_therapie">
                     <h2>Cupping thérapie</h2>
-                    <p>Le principe de cette technique est de poser des verres et des ventouses en bambou sur des zones tendues, douloureuses et enflammées pour les soulager avec l'effet des ventouses sèches. La cupping therapy elle a également un rôle réparateur, de stimulateur hormonal et de bien-être.</p>
+                    <p id="c_t">Le principe de cette technique est de poser des verres et des ventouses en bambou sur des zones tendues, douloureuses et enflammées pour les soulager avec l'effet des ventouses sèches. La cupping therapy elle a également un rôle réparateur, de stimulateur hormonal et de bien-être.</p>
+                    <button class="open-modal" id="cupping_therapie">En savoir plus</button>
                 </section>
             </div>
             <div id="secondLine">
-                <section class="service">
+                <section class="service" id="service4">
                     <img src="images/theraface.jpg" alt="soin-visage_theraface">
                     <h2>ThéraFace Pro</h2>
-                    <p>Soin du visage qui élimine les impurtés et nettoie en profondeur pour une peau nette et fraîche</p>
+                    <p id="t_f">Soin du visage qui élimine les impurtés et nettoie en profondeur pour une peau nette et fraîche</p>
+                    <button class="open-modal" id="theraface">En savoir plus</button>
                 </section>
-                <section class="service">
+                <section class="service" id="service5">
                     <img src="images/fauteil_massant.jpg" alt="">
                     <h2>Fauteil Massant</h2>
-                    <p>Les mouvements de massage que procurent les fauteuils massants favorisent la circulation sanguine partout dans le corps. Vous pouvez ainsi prévenir les engourdissements ou les raideurs ressenties dans vos jambes, votre dos, vos épaules ou votre cou.</p>
+                    <p id="f_m">Les mouvements de massage que procurent les fauteuils massants favorisent la circulation sanguine partout dans le corps. Vous pouvez ainsi prévenir les engourdissements ou les raideurs ressenties dans vos jambes, votre dos, vos épaules ou votre cou.</p>
+                    <button class="open-modal" id="fauteil_massant">En savoir plus</button>
                 </section>
             </div>
         </div>
         <div id="appareils">
             <h1>Technologies et appareils thérapeutique</h1>
             <div id="appareils_section">
-                <section class="service">
+                <section class="service" id="service6">
                     <img src="images/pressotherapie.jpg" alt="pressotherapie">
                     <h2>Préssothérapie</h2>
-                    <p>Elle favorise la récupération musculaire après un effort physique excessif (de nombreuses heures debout ou une activité sportive intense); Elle aide à retrouver la mobilité et à corriger la circulation veineuse et lymphatique; Elle empêche la rétention d'eau interstitielle dans les tissus des jambes.</p>
+                    <p id="p_t">Elle favorise la récupération musculaire après un effort physique excessif (de nombreuses heures debout ou une activité sportive intense); Elle aide à retrouver la mobilité et à corriger la circulation veineuse et lymphatique; Elle empêche la rétention d'eau interstitielle dans les tissus des jambes.</p>
+                    <button class="open-modal" id="presso_therapie">En savoir plus</button>
                 </section>
-                <section class="service">
+                <section class="service" id="service7">
                     <img src="images/cryotherapie.jpg" alt="cryotherapie">
                     <h2>Cryothérapie</h2>
-                    <p>Soulages vos membres lourds et douloureux plus rapidement et efficacement grâce a la cryothérapie compressive .</p>
+                    <p id="cr_t">Soulages vos membres lourds et douloureux plus rapidement et efficacement grâce a la cryothérapie compressive .</p>
+                    <button class="open-modal" id="cryo_therapie">En savoir plus</button>
                 </section>
-                <section class="service">
+                <section class="service" id="service8">
                     <img src="images/electrode_compex.jpg" alt="electrode_compex">
                     <h2>Electrode Compex</h2>
-                    <p>Pour réduire les douleurs sans les effets secondaires des médicaments, la stimulation basée sur le courant électrique, est une technique thérapeutique reconnue efficace et sécuritaire depuis les années 1960. Les nombreuses études à ce sujet sont unanimes. Le recours à l'électrostimulation neuro musculaire (TENS) s'explique par le fait que les influx douloureux sont bloqués par la stimulation. C'est ce que l'on appelle la théorie du passage contrôlé de la douleur. Florilège des bénéfices de l'électrostimulation dernière génération !</p>
+                    <p id="e_c">Pour réduire les douleurs sans les effets secondaires des médicaments, la stimulation basée sur le courant électrique, est une technique thérapeutique reconnue efficace et sécuritaire depuis les années 1960. Les nombreuses études à ce sujet sont unanimes. Le recours à l'électrostimulation neuro musculaire (TENS) s'explique par le fait que les influx douloureux sont bloqués par la stimulation. C'est ce que l'on appelle la théorie du passage contrôlé de la douleur. Florilège des bénéfices de l'électrostimulation dernière génération !</p>
+                    <button class="open-modal" id="electrode_compex">En savoir plus</button>
                 </section>
             </div>
         </div>
     </section>
-    <section id="testimonials">
-        <h1>Nous ont fait confiance</h1>
-        <div id="testimonials-carousel" class="carousel">
-            <div class="testimonial">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</p>
-                <cite>Client 1</cite>
-            </div>
-            <div class="testimonial">
-                <p>"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."</p>
-                <cite>Client 2</cite>
-            </div>
-            <!-- Ajoutez d'autres témoignages au besoin -->
+    <section id="price" class="display">
+        <div id="title">
+            <hr><p>TARIF</p><hr>
         </div>
+        <div id="theraface_price" class="price_service">
+            &#9733;<p>THERAFACE PRO  - 40MIN</p><hr><p>45&#8364;</p>
+        </div>
+        <div id="fauteil_massant_price" class="price_service">
+            &#9733;<p>FAUTEIL MASSANT + PRESSOTHERAPIE - 30MIN</p><hr><p>40&#8364;</p>
+        </div>
+        <div id="massage_californien_price" class="price_service">
+            &#9733;<p>MASSAGE CALIFORNIEN - 30MIN</p><hr><p>35&#8364;</p>
+        </div>
+        <div id="massage_californien_price" class="price_service">
+            &#9733;<p>MASSAGE CALIFORNIEN - 60MIN</p><hr><p>60&#8364;</p>
+        </div>
+        <div id="massage_suedois_price" class="price_service">
+            &#9733;<p>MASSAGE SUEDOIS - 30MIN</p><hr><p>39&#8364;</p>
+        </div>
+        <div id="massage_suedois_price" class="price_service">
+            &#9733;<p>MASSAGE SUEDOIS - 60MIN</p><hr><p>70&#8364;</p>
+        </div>
+        <div id="cupping_therapie_price1" class="price_service">
+            &#9733;<p>CUPPING THERAPIE HAUT OU BAS DU CORPS</p><hr><p>45&#8364;</p>
+        </div>
+        <div id="cupping_therapie_price2" class="price_service">
+            &#9733;<p>CUPPING THERAPIE FULL BODY</p><hr><p>75&#8364;</p>
+        </div>
+        <div id="cryotherapie_price" class="price_service">
+            &#9733;<p>CRYOTHERAPIE - 20MIN</p><hr><p>30&#8364;</p>
+        </div>
+        <div id="electrode_compex_price" class="price_service">
+            &#9733;<p>ELECTRODE COMPEX - 30MIN</p><hr><p>20&#8364;</p>
+        </div>
+        <hr id="second_part_hr">
         
-        <button id="prevButton">Précédent</button>
-        <button id="nextButton">Suivant</button>
-             
+        <section id="competition">
+            <div id="league1">
+                <p class="competition_type">La Ligue 1</p>
+                <div class="bg">
+                    <p>CUPPING THERAPIE</p>
+                    <p>VENTOUSE CHAUDE</p>
+                    <P>MASSAGE</P>
+                    <P>THERAGUN PRO</P>
+                    <P>SCRAPPING</P>
+                    <P>BOISSON</P>
+                </div><br>
+                <P class="competition_type">90&#8364;</P>
+            </div>
+            <div id="championsLeague">
+                <p class="competition_type">Ligue des Champions</p>
+                <div class="bg">
+                    <p>CUPPING THERAPIE</p>
+                    <p>VENTOUSE CHAUDE</p>
+                    <P>MASSAGE</P>
+                    <P>THERAGUN PRO</P>
+                    <P>SCRAPPING</P>
+                    <p>PRESSOTHERAPIE</p>
+                    <P>BOISSON</P>
+                </div><br>
+                <P class="competition_type">120&#8364;</P>
+            </div>
+            <div id="worldCup">
+                <p class="competition_type">Coupe du Monde</p>
+                <div class="bg">
+                    <p>CUPPING THERAPIE</p>
+                    <p>VENTOUSE CHAUDE</p>
+                    <P>MASSAGE</P>
+                    <P>THERAGUN PRO</P>
+                    <P>SCRAPPING</P>
+                    <p>PRESSOTHERAPIE</p>
+                    <p>CRYOTHERAPIE</p>
+                    <P>ELECTRODE COMPEX</P>
+                    <P>BOISSON</P>
+                </div><br>
+                <P class="competition_type">170&#8364;</P>
+            </div>
+        </section>
     </section>
-    <section id="contact">
+    <section id="contact" class="display">
         <h2 id="contact_h2">NOUS CONTACTER</h2>
-        <div id="tel" class="contact_composant">
-            <img src="images/ampoules.jpg" alt="">
+        <a href="tel:0755693939" class="contact_composant">
+            <img src="images/tel.png" alt="">
             <p>0755693939</p>
-        </div>
-        <div id="mail" class="contact_composant">
-            <img src="images/bien-etre.jpg" alt="">
+        </a>
+        <a href="mailto:polerecupnord@outlook.com" class="contact_composant">
+            <img src="images/mail.png" alt="">
             <p>polerecupnord@outlook.com</p>
-        </div>
+        </a>
+        
         <div id="snap" class="contact_composant">
-            <img src="images/massage-pistolet.jpg" alt="">
+            <img src="images/snap.png" alt="">
             <p>polerecup</p>
         </div>
         <div id="insta" class="contact_composant">
-            <img src="images/electrode_compex.jpg" alt="">
+            <img src="images/insta.jpg" alt="">
             <p>polerecupnord</p>
         </div>
-        <div id="adress" class="contact_composant">
-            <img src="images/fauteil_massant.jpg" alt="">
+        <a href="https://www.google.com/maps?q=1+Rue+Georges+Boidin,59130+Lambersart,FR" class="contact_composant">
+            <img src="images/adresse.png" alt="">
             <p>1 Rue Georges Boidin<br>59130 Lambersart, FR</p>
-        </div>
+        </a>
     </section>
+    <footer>
+        copyright &copy 2024 - Pole Recup | <a href="#contact">Contactez-nous</a>
+    </footer>
     <script src="scripts/main.js"></script>
 </body>
 </html>
