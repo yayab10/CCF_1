@@ -140,16 +140,16 @@ let contact = document.querySelector('#contact_display')
   }
 }
 function toggleMenu() {
-  var topnav = document.getElementById('topnav');
+  let topnav = document.getElementById('topnav');
   topnav.classList.toggle('responsive');
-  var icon = document.getElementById('topnav_hamburger_icon');
+  let icon = document.getElementById('topnav_hamburger_icon');
   icon.classList.toggle('open');
 }
 
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-  var topnav = document.getElementById("topnav");
+  let topnav = document.getElementById("topnav");
 
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     topnav.style.position = "fixed";
@@ -160,3 +160,9 @@ function scrollFunction() {
     topnav.style.top = "auto";
   }
 }
+
+
+// let massageCalifornien = document.getElementById('massage_californien')
+// massageCalifornien.addEventListener('click', function() {
+//   window.open('index2.html')
+// })
